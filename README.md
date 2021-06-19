@@ -1,5 +1,5 @@
 # vue-enter-to-tab
-A mixin to use the enter key as tab key behavior.
+A mixin to use the enter key as tab key behavior. You can see a demo [here](https://codesandbox.io/s/hardcore-ritchie-3g2my)
 
 ### Install  
 
@@ -13,7 +13,7 @@ npm i --save vue-enter-to-tab
 Install the mixin globally on your main file. It's **required** to install it as follows:
 
 ```javascript
-import VueEnterToTab from 'vue-reset-data';
+import VueEnterToTab from 'vue-enter-to-tab';
 
 Vue.use(VueEnterToTab, initialStatus);
 ```
@@ -46,6 +46,8 @@ export default {
 | v-prevent-enter-tab  | Directive to use in those inputs you want to avoid use enter as key | Directive   |
 
 These utilities are available globally, on all Vue instance.
+
+**Note**: This directive doesn't work on textarea elements.
 
 Any contribution is welcome. Visit my web page [here](https://www.ajomuch92.site/#/).
 
