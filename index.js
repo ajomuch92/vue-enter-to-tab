@@ -28,19 +28,19 @@ export const EnterToTabMixin = {
 export default {
   install(vue, initialValue) {
     vue.prototype.$isEnterToTabEnabled = initialValue||true;
-    vue.prototype.$disableEnter2Tab = () => {
+    vue.prototype.$disableEnterToTab = () => {
       vue.prototype.$isEnterToTabEnabled = false;
     };
-    vue.prototype.$enabledEnter2Tab = () => {
+    vue.prototype.$enabledEnterToTab = () => {
       vue.prototype.$isEnterToTabEnabled = true;
     };
-    vue.prototype.$disableEnter2Tab = () => {
+    vue.prototype.$disableEnterToTab = () => {
       vue.prototype.$isEnterToTabEnabled = false;
     };
-    vue.prototype.$setEnter2TabStatus = (value) => {
+    vue.prototype.$setEnterToTabStatus = (value) => {
       vue.prototype.$isEnterToTabEnabled = value;
     };
-    vue.prototype.$toggleEnter2Tab = () => {
+    vue.prototype.$toggleEnterToTab = () => {
       vue.prototype.$isEnterToTabEnabled = !vue.prototype.$isEnterToTabEnabled;
     };
     vue.directive('prevent-enter-tab', {
