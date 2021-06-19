@@ -1,0 +1,29 @@
+{
+  "name": "vue-enter-to-tab",
+  "version": "1.0.0",
+  "description": "A project to build a mixin to use enter as tab behavior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajomuch92/vue-enter-to-tab.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-enter-to-tab",
+    "enter-to-tab",
+    "enter",
+    "tab",
+    "vue-enter-2-tab",
+    "enter-2-tab"
+  ],
+  "author": "Aarón Montes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajomuch92/vue-enter-to-tab/issues"
+  },
+  "homepage": "https://github.com/ajomuch92/vue-enter-to-tab#readme"
+}
