@@ -47,9 +47,7 @@ export default {
 
 These utilities are available globally, on all Vue instance.
 
-Any contribution is welcome.
-
-Visit my web page [here](https://www.ajomuch92.site/#/)
+Any contribution is welcome. Visit my web page [here](https://www.ajomuch92.site/#/).
 
 ### License
 MIT
