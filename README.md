@@ -1,5 +1,5 @@
 # vue-enter-to-tab
-A mixin to use the enter key as tab key behavior. You can see a demo [here](https://codesandbox.io/s/hardcore-ritchie-3g2my)
+A mixin to use the enter key as tab key behavior. You can see a demo [here](https://codesandbox.io/s/hardcore-ritchie-3g2my).
 
 ### Install  
 
