@@ -1,69 +1,55 @@
-# vue-reset-data
-A mixin to reset your data to some point of time for VueJS components
+# vue-enter-to-tab
+A mixin to use the enter key as tab key behavior
 
 ### Install  
 
 NPM:  
 ```bash
-npm i --save vue-reset-data
+npm i --save vue-enter-to-tab
 ```
 
 ### Usage instructions  
 
-Install the mixin globally
+Install the mixin globally on your main file. It's **required** to install it as follows:
 
 ```javascript
-import Resetter from 'vue-reset-data';
+import VueEnterToTab from 'vue-reset-data';
 
-Vue.use(Resetter);
+Vue.use(VueEnterToTab, initialStatus);
 ```
 
-Or import it as an individual mixin on your component
+Where *initialStatus* indicates if the mixin is enabled or not.
 
-```javascript
-import {ResetterMixin} from 'vue-reset-data';
-
-export default {
-  ...
-  mixins: [ResetterMixin],
-  ...
-}
-```
 
 ### How to use it
 
-1. Call thefunction `initResetPlugin` to init the mixin at any point of the lifecycle of your component (Preferably on created or mounted):
-```javascript
-export default {
-  created() {
-    this.initResetPlugin()
-  }
-}
-```
-2. When you want to reset some, call the function `resetData`:
-```javascript
-export default {
-  methods: {
-    yourMethod() {
-      this.resetData([keys]);
-    }
-  }
-}
-```
-- keys: Arrays of strings containing the names of the data key you want to reset or a simple string with the name of the key to reset. If this value is null, will reset the whole data.
+After the installation, you can use the mixin on the component you need:
 
-This mixin include a method named $clone to clone in deep objects. Use as follow:
 ```javascript
+import {EnterToTabMixin} from 'vue-enter-to-tab';
 export default {
-  methods: {
-    yourMethod() {
-      const clonedObject = this.$clone(objectToClone);
-    }
-  }
+  ...
+  mixins: [EnterToTabMixin]
+  ...
 }
 ```
 
-**NOTE:** Do not use the key `$originalData` as part of your data.
+### Other utilities
+
+|  Name | Description   | Type   |
+| ------------ | ------------ | ------------ |
+| $isEnterToTabEnabled  | Data to indicate if mixin is enable | Boolean   |
+| $enabledEnterToTab  | Method to enable the mixin |  Method  |
+| $disableEnterToTab  | Method to disable the mixin | Method   |
+| $setEnterToTabStatus  | Method to set manually the mixin status. It receives as only paramater the status to set | Method   |
+| $toggleEnterToTab  | Method to toggle the mixin statud | Method   |
+| v-prevent-enter-tab  | Directive to use in those inputs you want to avoid use enter as key | Directive   |
+
+These utilities are available globally, on all Vue instance.
+
+Any contribution is welcome.
+
+Visit my web page (here)[https://www.ajomuch92.site/#/]
 
 ### License
 MIT
