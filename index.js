@@ -1,3 +1,5 @@
+const ENTER_CODE = 13;
+
 export const EnterToTabMixin = {
   mounted() {
     this.$el.addEventListener('keydown', this.$keyDownEventHandler);
@@ -7,8 +9,8 @@ export const EnterToTabMixin = {
   },
   methods: {
     $keyDownEventHandler(e) {
-      const {target, ctrlKey, code} = e;
-      if(code === 'Enter' 
+      const {target, ctrlKey, keyCode} = e;
+      if(keyCode === ENTER_CODE 
           && !ctrlKey 
           && target 
           && target.tagName.toLowerCase() != 'textarea' 
