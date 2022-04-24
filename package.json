@@ -1,6 +1,6 @@
 {
   "name": "vue-enter-to-tab",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A project to build a mixin to use enter as tab behavior",
   "main": "index.js",
   "scripts": {
