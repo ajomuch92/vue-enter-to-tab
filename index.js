@@ -18,7 +18,7 @@ export const EnterToTabMixin = {
           && !target.preventEnterTab) {
         e.preventDefault();
         const allElementsQuery = this.$el.querySelectorAll('input, button, a, textarea, select, audio, video, [contenteditable]');
-        const allElements = [...allElementsQuery].filter(r => !r.disabled && !r.hidden && r.offsetParent && !r.readOnly);
+        const allElements = [...allElementsQuery].filter(r => !r.disabled && !r.hidden && r.offsetParent && !r.readOnly && r.tabIndex >= 0);
         const currentIndex = [...allElements].indexOf(target);
         const targetIndex = (currentIndex + 1) % allElements.length;
         allElements[targetIndex].focus();
